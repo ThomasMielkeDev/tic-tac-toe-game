@@ -15,10 +15,12 @@ function markOne() {
         one.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         one = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         one.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         one = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -27,10 +29,12 @@ function markTwo() {
         two.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         two = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         two.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         two = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -39,10 +43,12 @@ function markThree() {
         three.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         three = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         three.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         three = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -51,10 +57,12 @@ function markFour() {
         four.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         four = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         four.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         four = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -63,10 +71,12 @@ function markFive() {
         five.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         five = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         five.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         five = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -75,10 +85,12 @@ function markSix() {
         six.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         six = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         six.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         six = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -87,10 +99,12 @@ function markSeven() {
         seven.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         seven = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         seven.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         seven = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -99,10 +113,12 @@ function markEight() {
         eight.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         eight = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         eight.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         eight = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
@@ -111,19 +127,58 @@ function markNine() {
         nine.innerHTML = '<img src="./images/x-image.png" alt="x-image"></img>';
         nine = "x";
         counter = 1;
+        checkWinCondition();
     } else {
         nine.innerHTML = '<img src="./images/o-image.png" alt="x-image"></img>';
         nine = "o";
         counter = 0;
+        checkWinCondition();
     }
 }
 
-one.addEventListener('click', markOne);
-two.addEventListener('click', markTwo);
-three.addEventListener('click', markThree);
-four.addEventListener('click', markFour);
-five.addEventListener('click', markFive);
-six.addEventListener('click', markSix);
-seven.addEventListener('click', markSeven);
-eight.addEventListener('click', markEight);
-nine.addEventListener('click', markNine);
+function checkWinCondition() {
+    if(one === 'x' && two === 'x' && three === 'x'){
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (one === 'o' && two === 'o' && three === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if(four === 'x' && five === 'x' && six === 'x'){
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (four === 'o' && five === 'o' && six === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if(seven === 'x' && eight === 'x' && nine === 'x'){
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (seven === 'o' && eight === 'o' && nine === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if(one === 'x' && four === 'x' && seven === 'x'){
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (one === 'o' && four === 'o' && seven === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if(two === 'x' && five === 'x' && eight === 'x'){
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (two === 'o' && five === 'o' && eight === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if(three === 'x' && six === 'x' && nine === 'x'){
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (three === 'o' && six === 'o' && nine === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if (one === 'x' && five === 'x' && nine === 'x') {
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (one === 'o' && five === 'o' && nine === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    } else if (three === 'x' && five === 'x' && seven === 'x') {
+        document.getElementById('information-container').innerHTML = 'X WINS!'
+    } else if (three === 'o' && five === 'o' && seven === 'o') {
+        document.getElementById('information-container').innerHTML = 'O WINS!'
+    }
+}
+
+
+one.addEventListener('click', markOne, checkWinCondition);
+two.addEventListener('click', markTwo, checkWinCondition);
+three.addEventListener('click', markThree, checkWinCondition);
+four.addEventListener('click', markFour, checkWinCondition);
+five.addEventListener('click', markFive, checkWinCondition);
+six.addEventListener('click', markSix, checkWinCondition);
+seven.addEventListener('click', markSeven, checkWinCondition);
+eight.addEventListener('click', markEight, checkWinCondition);
+nine.addEventListener('click', markNine, checkWinCondition);
